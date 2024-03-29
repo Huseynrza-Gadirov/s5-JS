@@ -1,41 +1,41 @@
-console.log("Salam, Roman")
-console.log("Salam, Tahir")
-console.log("Salam, Gunay")
+//* console.log("Salam, Roman")
+//* console.log("Salam, Tahir")
+//* console.log("Salam, Gunay")
 //* Regular
-function welcomeUser(istifadeciAdi) {
-    console.log("Salam," + istifadeciAdi)
-}
+//* function welcomeUser(istifadeciAdi) {
+//*    console.log("Salam," + istifadeciAdi)
+//* }
 
 
-welcomeUser("Gunay")
-welcomeUser("Roman")
-welcomeUser("Huseynrza")
+//* welcomeUser("Gunay")
+//* welcomeUser("Roman")
+//* welcomeUser("Huseynrza")
 
 //* Function vs Function expression
 //* Function expression
 
-const istifadeciniSalamla = function(userName) {
-    return "Welcome" + userName
-}
+//* const istifadeciniSalamla = function(userName) {
+//*     return "Welcome" + userName
+//* }
 
-istifadeciniSalamla("Raul")
+//* istifadeciniSalamla("Raul")
 
 //* Arrow function
 
-const istifadeciniSalamlaArrowFunc = (name, surname) => "Welcome" + name
-istifadeciniSalamlaArrowFunc("Meherrem")
+//* const istifadeciniSalamlaArrowFunc = (name) => "Welcome" + name
+//* istifadeciniSalamlaArrowFunc("Meherrem")
 
 //* IIFE Immediately Invoked Function Expression
 
-(function s5QrupunuSalamla(ad,soyad){
-    console.log("Welcome," + ad + "" + soyad)
-}("Meherrem", "Dadashov"))
+//* (function s5QrupunuSalamla(ad,soyad){
+//*    console.log("Welcome," + ad + "" + soyad)
+//* }("Meherrem", "Dadashov"))
 
 
 
 
 
-
+//* Slice -> stringlerin metodlaridir
 
 //* API Application Programming Interface
 
@@ -44,7 +44,7 @@ istifadeciniSalamlaArrowFunc("Meherrem")
 //* JSON Javascript Object Notation
 
 //* Hoisting ↓
-const mehsullarinYerlesheceyiYer = document.querySelector("")
+const mehsullarinYerlesheceyiYer = document.getElementById("mehsullar")
 window.addEventListener("DOMContentLoaded", getMelumatlariGetir) //* undefined
 
 async function getMelumatlariGetir() {
@@ -56,17 +56,15 @@ async function getMelumatlariGetir() {
 
         for(let i=0; i<mehsullar.length; i++) {
             mehsullarinYerlesheceyiYer.innerHTML += `
-            <div class="row">
             <div class="col-12 col-md-6 col-lg-4">
                <div class="card my-2 border-o">
                    <img src="${mehsullar[i].image}" class="card-img-top" alt="...">
                    <div class="card-body d-flex flex-column justify-content-evenly">
-                     <h5 class="card-title text-center">${mehsullar[i].title}</h5>
+                     <h5 class="card-title text-center">${mehsullar[i].title.slice(0,30)}</h5>
                      <p class="card-text">${mehsullar[i].description.slice(0,40)}...</p>
                      <a href="/details.html" class="btn btn-primary">Read more</a>
                    </div>
                </div>
-            </div>
             </div>
             `
         }
